@@ -58,7 +58,7 @@ public class Main {
 				System.out.println("Invalid command or location(s). Please try again");
 				error = true;
 			}
-			if (board[finish1][finish2].color().equals("w")) {
+			if (board[finish1][finish2].color().equals("w") || board[start1][start2].color().equals("b")) {
 				System.out.println("Invalid command or location(s). Please try again");
 				error = true;
 			}
@@ -317,6 +317,8 @@ public class Main {
 				return false;
 			}
 			// }
+		} else {
+			return false;
 		}
 		return true;
 	}
